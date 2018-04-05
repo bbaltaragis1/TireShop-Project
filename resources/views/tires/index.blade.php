@@ -7,6 +7,8 @@
                   <th>ID</th>
                   <th>Name</th>
                   <th>Price</th>
+                  <th>Brand</th>
+                  <th>Rim Diameter</th>
                   <th>Stock</th>
                   <th></th>
                   <th></th>
@@ -14,15 +16,17 @@
                 </thead>
                 @foreach($tires as $tire)
                   <tr>
-                    <td>{{$tire->id}}</td>
-                    <td>{{$tire->tire_name}}</td>
-                    <td>{{$tire->tire_price}}</td>
-                    <td>{{$tire->tire_stock}}</td>
-                    <td><a href="/tires/{{$tire->id}}/edit"><button type="button" class="btn btn-success">Edit</button></a></td>
+                    <td>{{$tire->tireID}}</td>
+                    <td>{{$tire->name}}</td>
+                    <td>{{$tire->price}}</td>
+                    <td>{{$tire->brand}}</td>
+                    <td>{{$tire->rimDiameter}}</td>
+                    <td>{{$tire->stock}}</td>
+                    <td><a href="/tires/{{$tire->tireID}}/edit"><button type="button" class="btn btn-success">Edit</button></a></td>
                     <td>
                       {!! Form::model($tire, [
                        'method' => 'DELETE',
-                      'route' => ['tires.destroy', $tire->id]
+                      'route' => ['tires.destroy', $tire->tireID]
                       ]) !!}
                       <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
@@ -32,5 +36,5 @@
 
               </tbody>
             </table>
-          <a href="/tires/create"><button type="button" class="btn btn-primary">Add new Tire</button></a>
+          <a href="/tires/create"><button type="button" class="btn btn-primary">Add Tire</button></a>
 @endsection

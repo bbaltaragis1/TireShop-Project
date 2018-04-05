@@ -1,7 +1,7 @@
 @extends ('layouts.master')
 
 @section ('content')
-<form method="POST" action="/tires/">
+<form method="POST" action="/employees/">
   {{ csrf_field() }}
   <div class="form-group">
      <div class = "row">
@@ -25,13 +25,13 @@
   <div class="form-group">
       <div class = "row">
         <div class="col-3">
-          <a href="/tires"><button class="btn btn-danger">Cancel</button></a>
+          <a href="/employees"><button class="btn btn-danger">Cancel</button></a>
         </div>
 
         <div class="col-3"></div>
      
         <div class="col-3">
-        <button type="submit" class="btn btn-primary">Add Tire</button>
+        <button type="submit" class="btn btn-primary">Add Employee</button>
         </div>
       </div>
   </div>
