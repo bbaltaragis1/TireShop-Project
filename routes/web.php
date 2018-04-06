@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::resource('tires', 'TireController');
 Route::resource('employees', 'EmployeeController');
+Route::resource('customers', 'CustomerController');
 /*Route::get('/tires/create','TireController@create');
 Route::post('/tires','TireController@store');
 Route::get('/tires','TireController@index');

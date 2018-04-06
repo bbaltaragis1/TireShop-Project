@@ -28,8 +28,6 @@
 	   </div>
   </div>
 
-
-
   <div class="form-group">
   	<div class = "row">
   	 
@@ -43,9 +41,7 @@
 
     </div>
   </div>
- 
-
-
+  @include ('layouts.errors')
 </form>
 <a href="/tires/"><button class="btn btn-danger">Cancel</button></a>
 @endsection

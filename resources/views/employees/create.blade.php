@@ -37,7 +37,7 @@
     </div>
   </div>
  
-
+  @include ('layouts.errors')
 
 </form>
 <a href="/employees/"><button class="btn btn-danger">Cancel</button></a>

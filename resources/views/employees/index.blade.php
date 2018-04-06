@@ -10,6 +10,7 @@
                   <th>Start Date</th>
                   <th></th>
                   <th></th>
+                  <th></th>
                 </tr>
                 </thead>
                 @foreach($employees as $employee)
@@ -18,6 +19,7 @@
                     <td>{{$employee->firstName}}</td>
                     <td>{{$employee->lastName}}</td>
                     <td>{{$employee->startDate}}</td>
+                    <td><a href="/employees/{{$employee->employeeID}}"><button type="button" class="btn btn-success">Show</button></a></td>
                     <td><a href="/employees/{{$employee->employeeID}}/edit"><button type="button" class="btn btn-success">Edit</button></a></td>
                     <td>
                       {!! Form::model($employee, [

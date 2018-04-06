@@ -12,6 +12,7 @@
                   <th>Stock</th>
                   <th></th>
                   <th></th>
+                  <th></th>
                 </tr>
                 </thead>
                 @foreach($tires as $tire)
@@ -22,6 +23,7 @@
                     <td>{{$tire->brand}}</td>
                     <td>{{$tire->rimDiameter}}</td>
                     <td>{{$tire->stock}}</td>
+                    <td><a href="/tires/{{$tire->tireID}}"><button type="button" class="btn btn-success">Show</button></a></td>
                     <td><a href="/tires/{{$tire->tireID}}/edit"><button type="button" class="btn btn-success">Edit</button></a></td>
                     <td>
                       {!! Form::model($tire, [
