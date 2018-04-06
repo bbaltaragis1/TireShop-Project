@@ -7,21 +7,26 @@
   	<div class = "row">
   		
       <div class="col-3">
-   			 Name<input type="text" class="form-control" placeholder=".col-2" id="tire_name" name="tire_name">
+   			 Name<input type="text" class="form-control" placeholder="Name" id="name" name="name">
   		</div>
   		
       <div class="col-3">
-   			 Price<input type="text" class="form-control" placeholder=".col-3" id="tire_price" name="tire_price">
+   			 Price<input type="text" class="form-control" placeholder="Price" id="price" name="price">
   		</div>
   		
       <div class="col-3">
-    		Stock<input type="text" class="form-control" placeholder=".col-4" id="tire_stock" name="tire_stock">
+    		Brand<input type="text" class="form-control" placeholder="Brand" id="brand" name="brand">
  	    </div>
+
+      <div class="col-3">
+        Rim Diameter<input type="text" class="form-control" placeholder="Rim Diameter" id="rimDiameter" name="rimDiameter">
+      </div>
+      <div class="col-3">
+        Stock<input type="text" class="form-control" placeholder="Stock" id="stock" name="stock">
+      </div>
 
 	   </div>
   </div>
-
-
 
   <div class="form-group">
   	<div class = "row">
@@ -36,9 +41,7 @@
 
     </div>
   </div>
- 
-
-
+  @include ('layouts.errors')
 </form>
 <a href="/tires/"><button class="btn btn-danger">Cancel</button></a>
 @endsection

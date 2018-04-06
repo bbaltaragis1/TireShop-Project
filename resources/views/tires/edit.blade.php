@@ -3,19 +3,25 @@
 @section ('content')
 {!! Form::model($tire, [
     'method' => 'PATCH',
-    'route' => ['tires.update', $tire->id]
+    'route' => ['tires.update', $tire->tireID]
 ]) !!}
   {{ csrf_field() }}
   <div class="form-group">
     <div class = "row">
       <div class="col-3">
-         Name<input type="text" class="form-control" value="{{$tire->tire_name}}" id="tire_name" name="tire_name" >
+         Name<input type="text" class="form-control" value="{{$tire->name}}" id="name" name="name" >
       </div>
       <div class="col-3">
-         Price<input type="text" class="form-control" value="{{$tire->tire_price}}" id="tire_price" name="tire_price">
+         Price<input type="text" class="form-control" value="{{$tire->price}}" id="price" name="price">
       </div>
       <div class="col-3">
-        Stock<input type="text" class="form-control" value="{{$tire->tire_stock}}" id="tire_stock" name="tire_stock">
+        Brand<input type="text" class="form-control" value="{{$tire->brand}}" id="brand" name="brand">
+    </div>
+    <div class="col-3">
+        Rim Diameter<input type="text" class="form-control" value="{{$tire->rimDiameter}}" id="rimDiameter" name="rimDiameter">
+    </div>
+    <div class="col-3">
+        Stock<input type="text" class="form-control" value="{{$tire->stock}}" id="stock" name="stock">
     </div>
   </div>
   </div>

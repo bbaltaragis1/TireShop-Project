@@ -20,9 +20,10 @@ class TireController extends Controller
     public function store(Request $request)
     {
    		$this->validate($request, [
-   			'tire_name' => 'required',
-   			'tire_price' => 'required',
-   			'tire_stock' => 'required'
+   			'name' => 'required',
+   			'price' => 'required',
+   			'brand' => 'required',
+            'rimDiameter' => 'required'
     	]);
         $input = $request->all();
         Tire::create($input);
@@ -30,25 +31,26 @@ class TireController extends Controller
 
 
     }
-    public function show($id)
+    public function show($tireID)
     {
-    	$tire = Tire::find($id);
+    	$tire = Tire::find($tireID);
 
     	return view('tires.show',compact('tire'));
     }
-    public function edit($id)
+    public function edit($tireID)
     {
-        $tire = Tire::find($id);
+        $tire = Tire::find($tireID);
         return view('tires.edit')->with('tire',$tire);
     }
-    public function update(Request $request, $id)
+    public function update(Request $request, $tireID)
     {
-        $tire = Tire::find($id);
+        $tire = Tire::find($tireID);
 
                 $this->validate($request, [
-            'tire_name' => 'required',
-            'tire_price' => 'required',
-            'tire_stock' => 'required'
+            'name' => 'required',
+            'price' => 'required',
+            'brand' => 'required',
+            'rimDiameter' => 'required'
         ]);
 
         $input = $request->all();
@@ -58,9 +60,9 @@ class TireController extends Controller
         return view('tires.index', compact('tires'));
 
     }
-    public function destroy($id)
+    public function destroy($tireID)
     {
-        $tire = Tire::find($id);
+        $tire = Tire::find($tireID);
 
         $tire->delete();
         $tires = Tire::all();
