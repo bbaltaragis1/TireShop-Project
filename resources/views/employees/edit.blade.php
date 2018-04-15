@@ -17,6 +17,14 @@
       <div class="col-3">
         Start Date<input type="text" class="form-control" value="{{$employee->startDate}}" id="startDate" name="startDate">
     </div>
+    <div class="col-3">
+        Status
+        <select name='status' id='status'>
+        <option value = 'working'>Working</option>
+        <option value = 'fired'>Fired</option>
+        <option value = 'on Leave'>On Leave</option>
+      </select>
+    </div>
   </div>
   </div>
   <div class="form-group">

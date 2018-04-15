@@ -48,7 +48,8 @@ class EmployeeController extends Controller
                 $this->validate($request, [
             'firstName' => 'required',
             'lastName' => 'required',
-            'startDate' => 'required'
+            'startDate' => 'required',
+            'status' => 'required'
         ]);
 
         $input = $request->all();

@@ -14,5 +14,6 @@
 </div>
 
 </form>
+<a href="/customers/"><button class="btn btn-danger">Cancel</button></a>
 
 @endsection
