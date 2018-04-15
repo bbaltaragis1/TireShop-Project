@@ -8,6 +8,7 @@
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Start Date</th>
+                  <th>Status</th>
                   <th></th>
                   <th></th>
                   <th></th>
@@ -19,6 +20,7 @@
                     <td>{{$employee->firstName}}</td>
                     <td>{{$employee->lastName}}</td>
                     <td>{{$employee->startDate}}</td>
+                    <td>{{$employee->status}}</td>
                     <td><a href="/employees/{{$employee->employeeID}}"><button type="button" class="btn btn-success">Show</button></a></td>
                     <td><a href="/employees/{{$employee->employeeID}}/edit"><button type="button" class="btn btn-success">Edit</button></a></td>
                     <td>

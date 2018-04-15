@@ -12,5 +12,5 @@
     </div>
 
 </div>
-
+<a href="/tires/"><button class="btn btn-danger">Cancel</button></a>
 @endsection
