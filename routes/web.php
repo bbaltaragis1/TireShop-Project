@@ -12,12 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 Route::resource('tires', 'TireController');
 Route::resource('employees', 'EmployeeController');
 Route::resource('customers', 'CustomerController');
-/*Route::get('/tires/create','TireController@create');
-Route::post('/tires','TireController@store');
-Route::get('/tires','TireController@index');
-Route::get('/tires/{tire}','TireController@show');*/
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
