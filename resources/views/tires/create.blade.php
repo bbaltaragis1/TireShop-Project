@@ -7,38 +7,38 @@
   	<div class = "row">
   		
       <div class="col-3">
-   			 Name<input type="text" class="form-control" placeholder="Name" id="name" name="name">
+   			 <label>Name</label><input type="text" class="form-control" id="name" name="name">
   		</div>
   		
       <div class="col-3">
-   			 Price<input type="text" class="form-control" placeholder="Price" id="price" name="price">
+   			 <label>Price</label><input type="text" class="form-control" id="price" name="price">
   		</div>
-  		
+
+  		</div>
+      <div class = "row">
       <div class="col-3">
-    		Brand<input type="text" class="form-control" placeholder="Brand" id="brand" name="brand">
+    		<label>Brand</label><input type="text" class="form-control"  id="brand" name="brand">
  	    </div>
 
       <div class="col-3">
-        Rim Diameter<input type="text" class="form-control" placeholder="Rim Diameter" id="rimDiameter" name="rimDiameter">
+        <label>Rim Diameter</label><input type="text" class="form-control"  id="rimDiameter" name="rimDiameter">
       </div>
+    </div>
+    <div class = "row">
       <div class="col-3">
-        Stock<input type="text" class="form-control" placeholder="Stock" id="stock" name="stock">
+        <label>Stock</label><input type="text" class="form-control"  id="stock" name="stock">
       </div>
-
+    </div>
 	   </div>
-  </div>
 
   <div class="form-group">
   	<div class = "row">
   	 
-     <div class="col-3"></div>
-  	 
-     <div class="col-3"></div>
-  	 
+  	 <div class = "row">
      <div class="col-3">
-  	   <button type="submit" class="btn btn-primary">Add Tire</button>
+  	   <label> </label><button type="submit" class="btn btn-primary">Add Tire</button>
      </div>
-
+   </div>
     </div>
   </div>
   @include ('layouts.errors')
