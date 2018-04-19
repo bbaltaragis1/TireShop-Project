@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddStatusToEmployees extends Migration
+class AddForeignKeysToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddStatusToEmployees extends Migration
      */
     public function up()
     {
-        Schema::table('employees', function($table) {
-        $table->enum('status', ['Working', 'Fired', 'On Leave']);
+        Schema::table('users', function(Blueprint $table)
+        {
+            $table->foreign('employeeID', 'fk_employees')->references('employeeID')->on('employees')->onUpdate('CASCADE')->onDelete('CASCADE');
         });
     }
 
@@ -25,8 +26,9 @@ class AddStatusToEmployees extends Migration
      */
     public function down()
     {
-        Schema::table('employees', function($table) {
-        $table->dropColumn('status');
+        Schema::table('orders', function(Blueprint $table)
+        {
+            $table->dropForeign('fk_employees');
         });
     }
 }

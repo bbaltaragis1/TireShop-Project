@@ -19,7 +19,7 @@
                     <td>{{$order->orderID}}</td>
                     <td>{{$order->tireID}}</td>
                     <td>{{$order->orderDate}}</td>
-                    <td>{{$order->Quantity}}</td>
+                    <td>{{$order->quantity}}</td>
                     <td>{{$order->laborCost}}</td>
                     <td><a href="/orders/{{$order->orderID}}"><button type="button" class="btn btn-success">Show</button></a></td>
                     <td><a href="/orders/{{$order->orderID}}/edit"><button type="button" class="btn btn-success">Edit</button></a></td>
