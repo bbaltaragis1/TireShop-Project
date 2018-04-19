@@ -18,8 +18,8 @@ class CreateEmployeesTable extends Migration {
 			$table->string('firstName', 50)->nullable();
 			$table->string('lastName', 50)->nullable();
 			$table->date('startDate')->nullable();
-			$table->string('password')->nullable();
-			$table->boolean('isAdmin')->nullable()->default(0);
+			$table->enum('status', ['Working', 'Fired', 'On Leave']);
+			
 		});
 	}
 

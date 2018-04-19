@@ -13,6 +13,7 @@
                   <th></th>
                   <th></th>
                   <th></th>
+                  <th></th>
                 </tr>
                 </thead>
                 @foreach($tires as $tire)
@@ -23,7 +24,13 @@
                     <td>{{$tire->brand}}</td>
                     <td>{{$tire->rimDiameter}}</td>
                     <td>{{$tire->stock}}</td>
-                    <td><a href="/tires/{{$tire->tireID}}"><button type="button" class="btn btn-success">Show</button></a></td>
+                    <td>
+                    <form method="POST" action="/orders/">
+                    {{ csrf_field() }}
+                      <label>Quantity</label><input type="number" class="form-control" id="quantity" name="quantity">
+                      <label> </label><button type="submit" class="btn btn-primary">Buy</button>
+                    </td>
+                  </form>
                     <td><a href="/tires/{{$tire->tireID}}/edit"><button type="button" class="btn btn-success">Edit</button></a></td>
                     <td>
                       {!! Form::model($tire, [

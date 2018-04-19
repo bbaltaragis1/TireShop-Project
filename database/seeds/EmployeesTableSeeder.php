@@ -23,8 +23,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'John',
                 'lastName' => 'Doe',
                 'startDate' => '2012-02-04',
-                'password' => '42f749ade7f9e195bf475f37a44cafcb',
-                'isAdmin' => 1,
+                'status' => 'Working',
             ),
             1 => 
             array (
@@ -32,8 +31,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Jake',
                 'lastName' => 'Wills',
                 'startDate' => '2012-02-05',
-                'password' => '68eacb97d86f0c4621fa2b0e17cabd8c',
-                'isAdmin' => 0,
+                'status' => 'Working',
             ),
             2 => 
             array (
@@ -41,8 +39,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Jill',
                 'lastName' => 'Doe',
                 'startDate' => '2012-02-06',
-                'password' => NULL,
-                'isAdmin' => 1,
+                'status' => 'Working',
             ),
             3 => 
             array (
@@ -50,8 +47,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Gabe',
                 'lastName' => 'Wills',
                 'startDate' => '2012-02-07',
-                'password' => NULL,
-                'isAdmin' => 0,
+                'status' => 'Working',
             ),
             4 => 
             array (
@@ -59,8 +55,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Albert',
                 'lastName' => 'Doe',
                 'startDate' => '2012-02-08',
-                'password' => NULL,
-                'isAdmin' => 1,
+                'status' => 'Working',
             ),
             5 => 
             array (
@@ -68,8 +63,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Bob',
                 'lastName' => 'Wills',
                 'startDate' => '2012-02-09',
-                'password' => NULL,
-                'isAdmin' => 0,
+                'status' => 'Working',
             ),
             6 => 
             array (
@@ -77,8 +71,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Blake',
                 'lastName' => 'Doe',
                 'startDate' => '2012-02-10',
-                'password' => NULL,
-                'isAdmin' => 1,
+                'status' => 'Working',
             ),
             7 => 
             array (
@@ -86,8 +79,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'George',
                 'lastName' => 'Wills',
                 'startDate' => '2012-02-11',
-                'password' => NULL,
-                'isAdmin' => 0,
+                'status' => 'Working',
             ),
             8 => 
             array (
@@ -95,8 +87,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Nick',
                 'lastName' => 'Doe',
                 'startDate' => '2012-02-12',
-                'password' => NULL,
-                'isAdmin' => 1,
+                'status' => 'Working',
             ),
             9 => 
             array (
@@ -104,8 +95,7 @@ class EmployeesTableSeeder extends Seeder
                 'firstName' => 'Noah',
                 'lastName' => 'Wills',
                 'startDate' => '2012-02-13',
-                'password' => NULL,
-                'isAdmin' => 0,
+                'status' => 'Working',
             ),
         ));
         
