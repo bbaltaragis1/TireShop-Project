@@ -3,6 +3,7 @@
 @section ('content')
 <form method="POST" action="/tires/">
 	{{ csrf_field() }}
+<div class="wrapper container">
   <div class="form-group">
   	<div class = "row">
   		
@@ -31,17 +32,16 @@
     </div>
 	   </div>
 
-  <div class="form-group">
   	<div class = "row">
   	 
-  	 <div class = "row">
      <div class="col-3">
   	   <label> </label><button type="submit" class="btn btn-primary">Add Tire</button>
      </div>
+     <div class="col-3">
+      <a href="/tires/"><button class="btn btn-danger">Cancel</button></a>
+    </div>
    </div>
     </div>
-  </div>
   @include ('layouts.errors')
 </form>
-<a href="/tires/"><button class="btn btn-danger">Cancel</button></a>
 @endsection

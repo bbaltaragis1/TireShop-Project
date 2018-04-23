@@ -27,7 +27,7 @@ class OrderController extends Controller
         ]);
         $input = $request->all();
         Order::create($input);
-        return redirect('/orders');
+        return redirect('/customers/create');
 
 
     }

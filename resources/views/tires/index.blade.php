@@ -36,7 +36,7 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                         </select>
-                        <button type="submit" class="btn btn-primary">Buy</button>
+                        <a href="/customers/create"><button type="submit" class="btn btn-primary">Buy</button></a>
                      </form>
                     </td>
                   </form>

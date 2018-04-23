@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Customer;
+use App\Employee;
+use App\Order;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -27,7 +29,10 @@ class CustomerController extends Controller
         ]);
         $input = $request->all();
         Customer::create($input);
-        return redirect('/customers');
+        $customer = Customer::all()->last();
+        $employee = Employee::all()->last();
+        $order = Order::all()->last();
+        return view('invoices.create' , compact('customer', 'employee', 'order'));
 
 
     }
