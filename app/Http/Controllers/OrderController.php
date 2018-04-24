@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Order;
+use App\Tire;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -27,6 +28,10 @@ class OrderController extends Controller
         ]);
         $input = $request->all();
         Order::create($input);
+        $order = Order::all()->last();
+        $tire = Tire::find($order->tireID);
+        
+        Tire::where('tireID', $tire->tireID)->update(array('stock' => $tire->stock - $order->quantity));
         return redirect('/customers/create');
 
 
@@ -63,8 +68,9 @@ class OrderController extends Controller
     public function destroy($orderID)
     {
         $order = Order::find($orderID);
-
         $order->delete();
+        $tire = Tire::find($order->tireID);
+        Tire::where('tireID', $tire->tireID)->update(array('stock' => $tire->stock + $order->quantity));
         $orders = Order::all();
         return view('orders.index', compact('orders'));
     }

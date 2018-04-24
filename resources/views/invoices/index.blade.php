@@ -1,6 +1,7 @@
 @extends ('layouts.master')
 
 @section ('content')
+
 <table class="table table-striped table-sm">
               <thead>
                 <tr>
@@ -22,7 +23,7 @@
                     <td>{{$invoice->customerID}}</td>
                     <td>{{$invoice->orderID}}</td>
                     <td>{{$invoice->invoiceDate}}</td>
-                    <td>{{$invoice->status}}in</td>
+                    <td>{{$invoice->status}}</td>
                     <td>
                     </td>
                   </form>
