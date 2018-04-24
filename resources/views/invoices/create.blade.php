@@ -30,8 +30,9 @@
 
       Status<select class = "form-control" name="status" id="status">
         <option value ="Pending">Pending</option>
-        <option value = "Complete">
-        </option>
+
+        <option value = "Complete">Complete</option>
+        
 
       </select>
     </div>

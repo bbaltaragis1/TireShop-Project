@@ -13,7 +13,7 @@ class InvoiceController extends Controller
 
     public function index()
     {
-        $invoices = Invoice::all();
+        $invoices = Invoice::orderBy('status')->get();
         return view('invoices.index', compact('invoices'));
     }
 
@@ -59,7 +59,7 @@ class InvoiceController extends Controller
 
         $invoice->fill($input)->save();
         $invoices = Invoice::all();
-        return view('invoices.index', compact('invoice'));
+        return view('invoices.index', compact('invoices'));
 
     }
     public function destroy($invoiceID)

@@ -36,5 +36,5 @@
 
               </tbody>
             </table>
-          <a href="/orders/create"><button type="button" class="btn btn-primary">Create New Order</button></a>
+
 @endsection

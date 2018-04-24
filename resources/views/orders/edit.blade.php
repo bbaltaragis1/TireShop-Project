@@ -6,6 +6,7 @@
     'route' => ['orders.update', $order->orderID]
 ]) !!}
   {{ csrf_field() }}
+<div class="wrapper container">
   <div class="form-group">
     <div class = "row">
       <div class="col-3">
@@ -14,6 +15,8 @@
       <div class="col-3">
          Order Date<input type="date" class="form-control" value="{{$order->orderDate}}" id="orderDate" name="orderDate">
       </div>
+    </div>
+    <div class="row">
       <div class="col-3">
         Amount Ordered<input type="text" class="form-control" value="{{$order->quantity}}" id="quantity" name="quantity">
     </div>
@@ -22,16 +25,16 @@
     </div>
   </div>
   </div>
-  <div class="form-group">
     <div class = "row">
     <div class="col-3">
     <button type="submit" class="btn btn-primary">Update</button>
   </div>
+  <div class="col-3">
+       <a href="/orders/"><button class="btn btn-danger" type = "button">Cancel</button></a>
   </div>
   </div>
- 
-
+ </div>
 
 </form>
-   <a href="/orders/"><button class="btn btn-danger">Cancel</button></a>
+
 @endsection
