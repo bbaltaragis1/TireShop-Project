@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Invoice;
+use App\Customer;
+use App\Mail\InvoiceMail;
 use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
@@ -27,7 +29,9 @@ class InvoiceController extends Controller
             'status' => 'required'
         ]);
         $input = $request->all();
-        Invoice::create($input);
+        $invoice = Invoice::create($input);
+        $customer = $invoice->customer;
+       \Mail::to($customer)->send(new InvoiceMail($invoice));
         return redirect('/invoices');
 
 

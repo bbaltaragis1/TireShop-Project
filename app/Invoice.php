@@ -12,21 +12,35 @@ class Invoice extends Model
 
     public function customer()
     {
-        return $this->belongsTo('Customer', 'customerID');
+        return $this->belongsTo('App\Customer', 'customerID');
     }
 
     public function employee()
     {
-        return $this->belongsTo('Employee', 'employeeID');
+        return $this->belongsTo('App\Employee', 'employeeID');
+    }
+
+       public function order()
+    {
+        return $this->orders()
+            ->take(1)
+            ->first();
     }
 
     public function orders()
     {
-        return $this->hasMany('Order', 'orderID');
+        return $this->hasMany('App\Order', 'orderID');
     }
 
     public function tires()
     {
-        return $this->hasManyThrough('Tire', 'Order', 'orderID', 'tireID');
+        return $this->hasManyThrough('App\Tire', 'App\Order', 'orderID', 'tireID');
+    }
+
+    public function tire()
+    {
+        return $this->tires()
+            ->take(1)
+            ->first();
     }
 }
