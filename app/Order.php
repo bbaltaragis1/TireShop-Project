@@ -12,12 +12,12 @@ class Order extends Model
 
 	public function invoice()
     {
-        return $this->belongsTo('Invoice', 'orderID');
+        return $this->belongsTo('App\Invoice', 'orderID');
     }
 
     public function tire()
     {
-    	return $this->belongsTo('Tire', 'tireID');
+    	return $this->belongsTo('App\Tire', 'tireID');
     }
     
 }

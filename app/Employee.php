@@ -9,7 +9,7 @@ class Employee extends Model
 
      public function invoices()
     {
-        return $this->hasMany('Invoice', 'employeeID');
+        return $this->hasMany('App\Invoice', 'employeeID');
     }
 	
 }
