@@ -1,6 +1,26 @@
 @extends ('layouts.master')
 
 @section ('content')
+<form method="post" action="{{ action('TireController@search') }}">
+  {{ csrf_field() }}
+    <div class="wrapper container">
+      <div class="form-group">
+        <div class = "row">
+          Search by rim diameter:
+            <div class="col-3">
+              <input type="text" class="form-control" placeholder="Rim diameter" id="rimDiameter" name="rimDiameter">
+            </div>
+            <div class="col-3">
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-3">
+              <a href="/tires"><button type="button" class="btn btn-success">Refresh</button></a>
+            </div>
+        </div>
+      </div>
+  </div>
+</form>
+
 <table class="table table-striped table-sm">
               <thead>
                 <tr>

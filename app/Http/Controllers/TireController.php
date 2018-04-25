@@ -17,6 +17,12 @@ class TireController extends Controller
     	return view('tires.index', compact('tires'));
     }
 
+    public function search(Request $request)
+    {
+        $tires = Tire::where('rimDiameter', 'LIKE' , (int)$request->input('rimDiameter'))->get();
+        return view('tires.index' , compact('tires'));
+    }
+
     public function store(Request $request)
     {
    		$this->validate($request, [

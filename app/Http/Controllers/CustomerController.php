@@ -19,6 +19,14 @@ class CustomerController extends Controller
         return view('customers.index', compact('customers'));
     }
 
+    public function inSystem(Request $request)
+    {
+        $input = $request->all();
+        $customer = Customer::where('phoneNumber', 'LIKE' , $request->input('phoneNumber'))->first();
+        $employee = Employee::all()->last();
+        $order = Order::all()->last();
+        return view('invoices.create' , compact('customer', 'employee', 'order'));
+    }
     public function store(Request $request)
     {
         $this->validate($request, [

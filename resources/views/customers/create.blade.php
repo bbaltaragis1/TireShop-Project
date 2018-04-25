@@ -1,11 +1,31 @@
+<?php use App\Customer; ?>
 @extends ('layouts.master')
 
 @section ('content')
+<form method="post" action="{{ action('CustomerController@inSystem') }}">
+  {{ csrf_field() }}
+    <div class="wrapper container">
+      <div class="form-group">
+        <div class = "row">
+            <div class="col-3">
+              If customer in system enter number below<input type="text" class="form-control" placeholder="Customer Phone Number" id="phoneNumber" name="phoneNumber">
+            </div>
+          </div>
+          <div class = "row">
+            <div class="col-3">
+             <p style="color:white"></p>
+              <button type="submit" class="btn btn-primary">Generate Invoice</button>
+            </div>
+        </div>
+      </div>
+  </div>
+</form>
+
 <form method="POST" action="/customers/">
-	{{ csrf_field() }}
+  {{ csrf_field() }}
 <div class="wrapper container">
   <div class="form-group">
-    Customer already in system? <a><button type="button" class = "btn btn-primary"> Click Here</button></a>
+
   	<div class = "row">
   		
       <div class="col-3">
